@@ -10,8 +10,13 @@
       <label for="name">Name</label>
       <input type="text" name="name" value ="<%= ninjas.name %>">
       <label for="name">Description</label>
-      <input type="text" name="description" value"<%= ninjas.description %>">
+      <input type="text" name="description" value = "<%= ninjas.description %>">
       <input type="submit" value="Update!">
+      <% for (idx in ninjas) { %>
+          <form action="/<%= ninjas[idx]._id %>" method='post'>
+            <input type="submit" value="Delete">
+          </form>
+      <% } %>
     </form>
   </body>
 </html>

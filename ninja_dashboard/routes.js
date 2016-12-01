@@ -28,16 +28,16 @@ module.exports = function(app){
 
   // Update
   app.get('/:id', function(req, res){
-    Ninja.find({ _id: req.params.id }, function(err, response) {
+    Ninja.findById({ _id: req.params.id }, function(err, response) {
       if (err) { console.log(err); }
-    res.render('edit', { ninjas: response[0] });
+    res.render('edit', { ninjas: response });
     })
   });
 
   app.post('/:id', function(req, res){
     Ninja.update({ _id: req.params.id }, req.body, function(err, result){
       if (err) { console.log(err); }
-    res.redirect('/edit');
+    res.redirect('/');
     });
   });
 
