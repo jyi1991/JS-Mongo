@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Update/Delete Ninja</title>
+  </head>
+  <body>
+    <h1> Update/delete Ninja <%= ninjas.name %></h1>
+    <form action="/<%= ninjas.id%>" method='post'>
+      <label for="name">Name</label>
+      <input type="text" name="name" value ="<%= ninjas.name %>">
+      <label for="name">Description</label>
+      <input type="text" name="description" value"<%= ninjas.description %>">
+      <input type="submit" value="Update!">
+    </form>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ninja Dashboard</title>
+  </head>
+  <body>
+    <h1> Ninja Dashboard!!</h1>
+    <a href= "/ninjas/new">Create a New Ninja</a>
+    <h3> Ninja List!</h1>
+    <% for (idx in ninjas) { %>
+      <li>
+      <a href = "<%= ninjas[idx]._id%>">  <%= ninjas[idx].name %></a>
+    </li>
+    <% } %>
+  </body>
+</html>
