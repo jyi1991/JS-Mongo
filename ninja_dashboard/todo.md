@@ -20,5 +20,10 @@
 
 3. Database/schema/model setup
   + NinjaSchema
-  + name
-  + description
+    + name
+    + description
+
+
+#Refractor to SPA
+
+1. is server-side rendering appropraite?
