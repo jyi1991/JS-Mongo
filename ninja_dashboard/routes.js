@@ -42,7 +42,7 @@ module.exports = function(app){
   });
 
   // Delete
-  app.post('/:id/delete', function(req, res){
+  app.post('/ninjas/:id/delete', function(req, res){
     Ninja.remove({ _id: req.params.id }, function(err, result){
       if (err) { console.log(err); }
     res.redirect('/');
